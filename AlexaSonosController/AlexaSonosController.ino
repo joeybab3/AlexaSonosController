@@ -1,7 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <SonosUPnP.h>
 #include <MicroXPath_P.h>
-//#include <MicroXPath.h>
 
 #include "WemoSwitch.h"
 #include "WemoManager.h"
@@ -73,7 +72,7 @@ void lightOn() {
 }
 
 void lightOff() {
-    Serial.print("Switch 1 turn off ...");
+    Serial.print("Speaker turned off ...");
     g_sonos.pause(g_JoeyIP);
 }
 
