@@ -11,25 +11,28 @@
 #define ETHERNET_ERROR_DHCP "E: DHCP"
 #define ETHERNET_ERROR_CONNECT "E: Connect"
 
-// prototypes
+//pre-define wifi stuff
 boolean connectWifi();
 
-//on/off callbacks
+//Pre defines
 void lightOn();
 void lightOff();
 void ethConnectError();
 
+//init
 WiFiClient client;
 SonosUPnP g_sonos = SonosUPnP(client, ethConnectError);
 IPAddress g_JoeyIP(192, 168, 1, 250);
+WemoManager wemoManager;
+WemoSwitch *light = NULL;
+
 const char g_JoeyID[] = "949F3E0C46646";
 
-//------- Replace the following! ------
+//------- Replace the following with your own! ------
 char ssid[] = "ssid";       // your network SSID (name)
 char password[] = "password";  // your network key
 
-WemoManager wemoManager;
-WemoSwitch *light = NULL;
+
 
 void setup()
 {
