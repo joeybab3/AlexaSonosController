@@ -11,15 +11,12 @@
 #define ETHERNET_ERROR_DHCP "E: DHCP"
 #define ETHERNET_ERROR_CONNECT "E: Connect"
 
-//pre-define wifi stuff
+//Setup functions
 boolean connectWifi();
-
-//Pre defines
 void lightOn();
 void lightOff();
 void ethConnectError();
 
-//init
 WiFiClient client;
 SonosUPnP g_sonos = SonosUPnP(client, ethConnectError);
 IPAddress g_JoeyIP(192, 168, 1, 250);
